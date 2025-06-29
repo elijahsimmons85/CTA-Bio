@@ -1,0 +1,70 @@
+[
+  {
+    "id": "1",
+    "name": "First Last",
+    "trade": "Trade",
+    "portraitPath": "john_smith",
+    "description": "Possibly put brief description here",
+    "videoUrls": {
+      "intro": "path/to/intro/video",
+      "craft": "path/to/craft/video"
+    }
+  },
+  {
+    "id": "1",
+    "name": "First Last",
+    "trade": "Trade",
+    "portraitPath": "john_smith",
+    "description": "Possibly put brief description here",
+    "videoUrls": {
+      "intro": "path/to/intro/video",
+      "craft": "path/to/craft/video"
+    }
+  },
+  {
+    "id": "1",
+    "name": "First Last",
+    "trade": "Trade",
+    "portraitPath": "john_smith",
+    "description": "Possibly put brief description here",
+    "videoUrls": {
+      "intro": "path/to/intro/video",
+      "craft": "path/to/craft/video"
+    }
+  },
+  {
+    "id": "1",
+    "name": "First Last",
+    "trade": "Trade",
+    "portraitPath": "john_smith",
+    "description": "Possibly put brief description here",
+    "videoUrls": {
+      "intro": "path/to/intro/video",
+      "craft": "path/to/craft/video"
+    }
+  },
+  {
+    "id": "1",
+    "name": "First Last",
+    "trade": "Trade",
+    "portraitPath": "john_smith",
+    "description": "Possibly put brief description here",
+    "videoUrls": {
+      "intro": "path/to/intro/video",
+      "craft": "path/to/craft/video"
+    }
+  },
+  {
+    "id": "1",
+    "name": "First Last",
+    "trade": "Trade",
+    "portraitPath": "john_smith",
+    "description": "Possibly put brief description here",
+    "videoUrls": {
+      "intro": "path/to/intro/video",
+      "craft": "path/to/craft/video"
+    }
+  }
+  
+  
+]
