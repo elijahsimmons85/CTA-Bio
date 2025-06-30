@@ -1,70 +1,36 @@
 [
   {
     "id": "1",
-    "name": "First Last",
+    "name": "John Smith",
     "trade": "Trade",
-    "portraitPath": "john_smith",
+    "portraitPath": "",
     "description": "Possibly put brief description here",
-    "videoUrls": {
-      "intro": "path/to/intro/video",
-      "craft": "path/to/craft/video"
+    "videoCommands": {
+      "bio": "Play_0",
+      "craft": "Play_1"
     }
   },
   {
-    "id": "1",
-    "name": "First Last",
+    "id": "2",
+    "name": "Ted Smith",
     "trade": "Trade",
-    "portraitPath": "john_smith",
+    "portraitPath": "",
     "description": "Possibly put brief description here",
-    "videoUrls": {
-      "intro": "path/to/intro/video",
-      "craft": "path/to/craft/video"
+    "videoCommands": {
+      "bio": "Play_2",
+      "craft": "Play_3"
     }
   },
-  {
-    "id": "1",
-    "name": "First Last",
+    {
+    "id": "3",
+    "name": "Randy Smith",
     "trade": "Trade",
-    "portraitPath": "john_smith",
+    "portraitPath": "",
     "description": "Possibly put brief description here",
-    "videoUrls": {
-      "intro": "path/to/intro/video",
-      "craft": "path/to/craft/video"
-    }
-  },
-  {
-    "id": "1",
-    "name": "First Last",
-    "trade": "Trade",
-    "portraitPath": "john_smith",
-    "description": "Possibly put brief description here",
-    "videoUrls": {
-      "intro": "path/to/intro/video",
-      "craft": "path/to/craft/video"
-    }
-  },
-  {
-    "id": "1",
-    "name": "First Last",
-    "trade": "Trade",
-    "portraitPath": "john_smith",
-    "description": "Possibly put brief description here",
-    "videoUrls": {
-      "intro": "path/to/intro/video",
-      "craft": "path/to/craft/video"
-    }
-  },
-  {
-    "id": "1",
-    "name": "First Last",
-    "trade": "Trade",
-    "portraitPath": "john_smith",
-    "description": "Possibly put brief description here",
-    "videoUrls": {
-      "intro": "path/to/intro/video",
-      "craft": "path/to/craft/video"
+    "videoCommands": {
+      "bio": "play_randy_bio",
+      "craft": "play_randy_craft"
     }
   }
-  
   
 ]

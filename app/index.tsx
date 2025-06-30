@@ -1,21 +1,24 @@
 import { LinearGradient } from "expo-linear-gradient";
+import { useRouter } from "expo-router";
 import React from "react";
-import { StyleSheet, useWindowDimensions } from "react-native";
+import { Dimensions, StyleSheet, Text, View } from "react-native";
 import { useSharedValue } from "react-native-reanimated";
 import Carousel, {
   ICarouselInstance,
-  Pagination
+  Pagination,
 } from "react-native-reanimated-carousel";
 import artisans from "../assets/artisans.json";
 import ArtisanCard from "../components/ArtisanCard";
+import HiddenMaintenanceTrigger from "../components/HiddenMaintenanceTrigger";
 
 export default function Index() {
   const ref = React.useRef<ICarouselInstance>(null);
-  const { width, height } = useWindowDimensions();
+  const { width, height } = Dimensions.get("window");
   const progress = useSharedValue<number>(0);
+  const router = useRouter();
 
   const CARD_WIDTH = width * 1;
-  const CARD_HEIGHT = height * 0.9;
+  const CARD_HEIGHT = height * 0.95;
 
   const onPressPagination = (index: number) => {
     ref.current?.scrollTo({
@@ -24,24 +27,32 @@ export default function Index() {
     });
   };
 
+  console.log("Window dimensions:", width, height);
+
+  // Don't render until dimensions are known
+  if (width === 0 || height === 0) {
+    return (
+      <View style={styles.loadingContainer}>
+        <Text style={styles.loadingText}>Loading...</Text>
+      </View>
+    );
+  }
+
   return (
-    <LinearGradient
-      colors={["#ffffff", "#dddddd"]}
-      style={styles.container}
-    >
+    <LinearGradient colors={["#ffffff", "#dddddd"]} style={styles.container}>
       <Carousel
         ref={ref}
         data={artisans}
         width={CARD_WIDTH}
         height={CARD_HEIGHT}
-        style={{ width: width }} // the container takes the whole width
-        mode="parallax"  // Changed from "horizontal-stack" to "parallax"
+        style={{ width: width }}
+        mode="parallax"
         modeConfig={{
-          parallaxScrollingScale: 0.85,    // Scale for side cards
-          parallaxScrollingOffset: CARD_WIDTH * 0.25,  // Offset for parallax effect
-          parallaxAdjacentItemScale: 0.7,  // Scale for adjacent items
+          parallaxScrollingScale: 0.85,
+          parallaxScrollingOffset: CARD_WIDTH * 0.25,
+          parallaxAdjacentItemScale: 0.7,
         }}
-        pagingEnabled={true}      // center active card
+        pagingEnabled={true}
         snapEnabled={true}
         loop={true}
         autoPlay={false}
@@ -55,6 +66,7 @@ export default function Index() {
           />
         )}
       />
+
       <Pagination.Basic
         progress={progress}
         data={artisans}
@@ -65,11 +77,14 @@ export default function Index() {
           borderRadius: 50,
         }}
         activeDotStyle={{
-					borderRadius: 100
+          borderRadius: 100,
         }}
-        containerStyle={{ gap: 5, marginTop: 10 }}
+        containerStyle={{ gap: 5, marginTop: -30 }}
         onPress={onPressPagination}
-        
+      />
+
+      <HiddenMaintenanceTrigger
+        onActivate={() => router.push("/maintenance")}
       />
     </LinearGradient>
   );
@@ -79,5 +94,14 @@ const styles = StyleSheet.create({
   container: {
     flex: 1,
     justifyContent: "center",
+  },
+  loadingContainer: {
+    flex: 1,
+    justifyContent: "center",
+    alignItems: "center",
+  },
+  loadingText: {
+    fontSize: 18,
+    color: "#666",
   },
 });
