@@ -1,50 +1,91 @@
-# Welcome to your Expo app 👋
+    Install Xcode
 
-This is an [Expo](https://expo.dev) project created with [`create-expo-app`](https://www.npmjs.com/package/create-expo-app).
+    Install Xcode from the Mac App Store.
 
-## Get started
+    Open Xcode once to finish setup and accept the license.
 
-1. Install dependencies
+    Install Xcode Command Line Tools:
+    xcode-select --install
 
-   ```bash
-   npm install
-   ```
+    Accept the license in Terminal:
+    sudo xcodebuild -license accept
 
-2. Start the app
+    Install CocoaPods
 
-   ```bash
-   npx expo start
-   ```
+Install CocoaPods (required for iOS native dependencies):
+sudo gem install cocoapods
 
-In the output, you'll find options to open the app in a
+Verify installation:
+pod --version
 
-- [development build](https://docs.expo.dev/develop/development-builds/introduction/)
-- [Android emulator](https://docs.expo.dev/workflow/android-studio-emulator/)
-- [iOS simulator](https://docs.expo.dev/workflow/ios-simulator/)
-- [Expo Go](https://expo.dev/go), a limited sandbox for trying out app development with Expo
+    Install Node.js and npm
 
-You can start developing by editing the files inside the **app** directory. This project uses [file-based routing](https://docs.expo.dev/router/introduction).
+Install Node.js LTS version (18.x or newer):
+Download from https://nodejs.org
+Or via Homebrew:
+brew install node
 
-## Get a fresh project
+Verify installation:
+node -v
+npm -v
 
-When you're ready, run:
+    Install Expo CLI and EAS CLI
 
-```bash
-npm run reset-project
-```
+Install globally:
+npm install -g expo-cli eas-cli
 
-This command will move the starter code to the **app-example** directory and create a blank **app** directory where you can start developing.
+Verify:
+expo --version
+eas --version
 
-## Learn more
+    Clone the Project
 
-To learn more about developing your project with Expo, look at the following resources:
+Clone this repository:
+git clone <your-repo-url>
+cd <project-folder>
 
-- [Expo documentation](https://docs.expo.dev/): Learn fundamentals, or go into advanced topics with our [guides](https://docs.expo.dev/guides).
-- [Learn Expo tutorial](https://docs.expo.dev/tutorial/introduction/): Follow a step-by-step tutorial where you'll create a project that runs on Android, iOS, and the web.
+    Install JavaScript Dependencies
 
-## Join the community
+Install Node modules:
+npm install
 
-Join our community of developers creating universal apps.
+    Install iOS Pods
 
-- [Expo on GitHub](https://github.com/expo/expo): View our open source platform and contribute.
-- [Discord community](https://chat.expo.dev): Chat with Expo users and ask questions.
+From the ios directory:
+cd ios
+pod install
+
+    Open Xcode Workspace
+
+Open the project in Xcode:
+open *.xcworkspace
+
+    Configure Signing
+
+In Xcode:
+
+    Select the blue project icon in the sidebar.
+
+    Under Targets, click your app target.
+
+    Go to Signing & Capabilities.
+
+    Choose your Apple ID under Team.
+
+    Ensure the Bundle Identifier is unique, for example: com.yourname.museumapp
+
+    Connect iPad
+
+    Plug in your iPad.
+
+    Unlock it.
+
+    Trust the Mac when prompted.
+
+    Build and Run
+
+In Xcode:
+
+    Select your iPad in the device selector.
+
+    Press Run (the ▶️ button) to build and install the app.
