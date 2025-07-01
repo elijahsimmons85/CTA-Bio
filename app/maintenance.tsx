@@ -1,4 +1,3 @@
-import { Ionicons } from "@expo/vector-icons";
 import AsyncStorage from "@react-native-async-storage/async-storage";
 import { useRouter } from "expo-router";
 import React, { useEffect, useState } from "react";
@@ -88,7 +87,6 @@ export default function Maintenance() {
     >
       <View style={styles.content}>
         <View style={styles.header}>
-          <Ionicons name="settings" size={32} color="#007AFF" />
           <Text style={styles.title}>Maintenance Configuration</Text>
         </View>
 
